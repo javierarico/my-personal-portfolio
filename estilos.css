@@ -1,0 +1,244 @@
+:root {
+  --dark-gray: #424242;
+  --light-pink: #fa5285;
+  --very-light-pink: #e0d1db;
+  --dark-pink: #ff2b6c;
+  --white: #fafafa;
+  --light-gray: #b3b3b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--dark-pink);
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 15px;
+  padding-right: 20px; 
+}
+
+#navbar li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+#navbar li a:hover {
+  color: var(--dark-gray);
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: var(--dark-gray);
+}
+
+#welcome-section h1 {
+  padding-top: 35vh;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--white);
+}
+
+#welcome-section p {
+  font-size: 1em;
+  color: var(--light-pink);
+}
+
+#projects {
+  background-color: var(--very-light-pink);
+  padding-top: 15vh;
+  padding-bottom: 20vh;
+  text-align: center;
+}
+
+#projects a {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+#projects h2 {
+  font-size: 1.2em;
+  max-width: 550px;
+  margin: 0 auto;
+  padding-bottom: 7px;
+  margin-bottom: 50px;
+  border-bottom: 0.1em solid var(--dark-gray);
+}
+
+#projects h2:hover {
+  color: var(--dark-pink);
+  border-bottom: 0.1em solid var(--dark-pink);
+}
+
+.grid-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 40px 40px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 250px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item .project-title {
+  font-size: 0.5em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--light-pink);
+  padding: 15px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.grid-item a {
+  text-decoration: none;
+}
+
+.grid-item span {
+  font-size: 0.9em;
+}
+
+.grid-item p:hover {
+  color: var(--dark-gray);
+}
+
+#contact {
+  background-color: var(--dark-gray);
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+  text-align: center;
+  color: var(--white);
+}
+
+.contact-header h3 {
+  margin: 15px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.contact-header p {
+  font-size: 0.7em;
+  margin: 15px;
+  font-weight: light;
+  color: var(--light-pink);
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-size: 0.7em;
+  color: var(--white);
+  margin: 10px;
+}
+
+.contact-links i {
+  color: var(--dark-pink);
+  font-size: 1.2em;
+  margin: 5px;
+}
+
+.contact-links a:hover {
+  color: var(--dark-pink);
+}
+
+footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  text-align: center;
+  padding: 7vh;
+  border-top: 4px solid var(--dark-pink);
+}
+
+.attribution {
+  font-size: 0.6em;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--light-pink);
+  font-size: 1em;
+}
+
+.attribution a i {
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  #welcome-section h1 {
+    padding-top: 45vh;
+  }
+  
+  #projects {
+    padding: 15vh 1vw;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px 10px;
+  }
+
+  .grid-item .project-title {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  #welcome-section h1 {
+    padding-top: 50vh;
+  }
+  
+  #projects {
+    padding: 15vh 2vw;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px 20px;
+   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-item .project-title {
+    font-size: 0.6em;
+  }
+}
